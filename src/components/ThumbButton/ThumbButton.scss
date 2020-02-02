@@ -1,0 +1,15 @@
+.thumb-button {
+  border: none;
+  cursor: pointer;
+  height: 80px;
+  outline: none;
+  width: 50%;
+
+  &.up {
+    background: rgba(30, 187, 180, 0.9);
+  }
+
+  &.down {
+    background: rgba(255, 173, 29, 0.9);
+  }
+}

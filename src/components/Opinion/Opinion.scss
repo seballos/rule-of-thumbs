@@ -1,0 +1,23 @@
+.opinion {
+  left: 130px;
+  max-width: 500px;
+
+  position: absolute;
+  top: 175px;
+
+  &__content {
+    background: rgba(51, 51, 51, 0.45);
+    color: white;
+//    filter: blur(4px);
+    padding: 40px 30px;
+  }
+
+  &__actions {
+    display: flex;
+  }
+
+  &__personality {
+    font-size: 57px;
+    letter-spacing: 2.4px;
+  }
+}

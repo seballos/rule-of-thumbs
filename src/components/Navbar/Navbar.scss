@@ -1,0 +1,43 @@
+@import '../../styles/partials/mixins';
+
+$navbar-height: 100px;
+$navbar-line-height: 90px;
+
+.navbar {
+  background: linear-gradient(rgba(0, 0, 0, 0.5), transparent);
+  color: white;
+  height: $navbar-height;
+  left: 0;
+  position: absolute;
+  right: 0;
+  top: 0;
+
+  &__title {
+    flex: 1 1 57%;
+    line-height: $navbar-line-height;
+    margin: 0;
+  }
+
+  &__list {
+    display: flex;
+    flex: 1 1 44%;
+    justify-content: space-between;
+    line-height: $navbar-line-height;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+
+  &__link {
+    @include lato-link {
+      color: inherit;
+    }
+  }
+
+  &__wrapper {
+    display: flex;
+    justify-content: space-between;
+    margin: 0 auto;
+    width: 80%;
+  }
+}

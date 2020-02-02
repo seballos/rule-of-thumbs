@@ -73,7 +73,8 @@ module.exports = {
 
   // A map from regular expressions to module names that allow to stub out resources with a single module
    moduleNameMapper: {
-     '^react-native$': 'react-native-web'
+     '^react-native$': 'react-native-web',
+      '\\.(s?css|less)$': 'identity-obj-proxy'
    },
 
   // An array of regexp pattern strings, matched against all module paths before considered 'visible' to the module loader
@@ -163,13 +164,12 @@ module.exports = {
 
   // A map from regular expressions to paths to transformers
    transform: {
-    '^.+\\.(js|jsx)?$': 'babel-jest',
-    '\\.(s?css|less)$': 'identity-obj-proxy'
+    '^.+\\.(js|jsx)?$': 'babel-jest'
    },
 
   // An array of regexp pattern strings that are matched against all source file paths, matched files will skip transformation
   // transformIgnorePatterns: [
-  //   "\\\\node_modules\\\\"
+  //  '/node_modules/'
   // ],
 
   // An array of regexp pattern strings that are matched against all modules before the module loader will automatically return a mock for them

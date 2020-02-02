@@ -1,0 +1,9 @@
+@mixin lato-link {
+  &,
+  &:active,
+  &:visited,
+  &:hover {
+    text-decoration: none;
+    @content;
+  }
+}

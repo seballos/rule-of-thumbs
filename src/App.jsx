@@ -2,6 +2,8 @@ import React from 'react';
 import { Switch, BrowserRouter, Route } from 'react-router-dom';
 import Home from './views/Home'
 import Navbar from './components/Navbar'
+import vendor from './vendor'
+
 import './App.scss'
 
 const App = () => {
@@ -18,5 +20,7 @@ const App = () => {
     </BrowserRouter>
   );
 };
+
+vendor()
 
 export default App;

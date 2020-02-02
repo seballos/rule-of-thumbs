@@ -74,6 +74,7 @@ module.exports = {
   // A map from regular expressions to module names that allow to stub out resources with a single module
    moduleNameMapper: {
      '^react-native$': 'react-native-web',
+     "\\.(jpg|jpeg|png|gif|eot|otf|webp|svg|ttf|woff|woff2|mp4|webm|wav|mp3|m4a|aac|oga)$": "<rootDir>/__mocks__/fileMock.js",
       '\\.(s?css|less)$': 'identity-obj-proxy'
    },
 
@@ -128,7 +129,7 @@ module.exports = {
   // snapshotSerializers: [],
 
   // The test environment that will be used for testing
-  testEnvironment: "jest-environment-node",
+  testEnvironment: "jest-environment-jsdom",
 
   // Options that will be passed to the testEnvironment
   // testEnvironmentOptions: {},

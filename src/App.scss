@@ -3,6 +3,17 @@ body {
   margin: 0;
 }
 
+.visuallyhidden {
+  border: 0;
+  clip-path: rect(0,0,0,0);
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+  width: 1px;
+}
+
 .container {
   background-color: white;
   font-family: 'Lato', sans-serif;
@@ -10,4 +21,8 @@ body {
   max-width: 1280px;
   position: relative;
   width: 100%;
+
+  p {
+    margin: 0;
+  }
 }

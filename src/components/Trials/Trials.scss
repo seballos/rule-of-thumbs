@@ -1,0 +1,125 @@
+@import '../../styles/partials/mixins';
+@import '../../styles/partials/colors';
+
+.trials {
+  display: flex;
+  justify-content: space-between;
+  flex-flow: row wrap;
+
+  &__votes {
+    display: inline-block;
+    margin-bottom: 27px;
+  }
+  
+  .trial {
+    flex: 1 1 45%;
+    margin-bottom: 20px;
+    margin-top: 20px;
+
+    &__background {
+      @include cover-image;
+      height: 550px;
+    }
+
+    &__icon {
+      height: 28px;
+      padding: 0 10px;
+      width: 28px;
+    }
+
+    &__overlay {
+      background: linear-gradient(transparent, rgba(0, 0, 0, 0.5));
+      bottom: 0;
+      position: absolute;
+      top: 0;
+      width: 100%;
+    }
+
+    &__information {
+      color: white;
+      bottom: 0;
+      display: flex;
+      flex-direction: column;
+      position: absolute;
+    }
+
+    &__basic-info {
+      display: flex;
+    }
+
+    &__actions {
+      display: flex;
+      margin-top: 20px;
+
+      &__button {
+        margin: 5px 10px 5px 0;
+
+        &--up {
+          border: 2px solid white;
+        }
+      }
+    }
+
+    &__vote-now {
+      background: linear-gradient(transparent, rgba(0, 0, 0, 0.5));
+      border: 2px solid white;
+      padding: 10px 30px;
+    }
+
+    &__overall-status {
+      padding: 5px;
+      height: 23px;
+      margin-right: 10px;
+      margin-top: 10px;
+
+      &--up {
+        background: $up-color;
+      }
+
+      &--down {
+        background: $down-color;
+      }
+
+      &__icon {
+        height: 20px;
+        width: 20px;
+      }
+    }
+
+    &__bio {
+      &__name {
+        margin: 0;
+      }
+    }
+
+    &__stats {
+      display: flex;
+      margin-top: 30px;
+      width: 100%;
+      
+      &__type {
+        align-items: center;
+        display: flex;
+        height: 50px;
+        position: relative;
+
+        &--up {
+          background: rgba($up-color, 0.7);
+        }
+
+        &--down{
+          background: rgba($down-color, 0.7);
+          justify-content: flex-end;
+        }
+      }
+    }
+
+    &:nth-child(even) {
+      margin-left: 20px;
+    }
+
+    &:nth-child(odd) {
+      margin-right: 20px;
+    }
+  }
+}

@@ -1,0 +1,26 @@
+.footer {
+  align-items: center;
+  border-top: 1px dotted black;
+  color: #333;
+  display: flex;
+  height: 90px;
+  justify-content: space-between;
+  font-size: 12px;
+
+  &__link {
+    margin-right: 25px;
+  }
+
+  &__follow {
+    display: flex;
+  }
+
+  &__follow-link {
+    margin: 0 20px 0 15px;
+  }
+
+  &__icon {
+    height: 25px;
+    width: 25px;
+  }
+}

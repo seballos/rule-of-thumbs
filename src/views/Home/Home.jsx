@@ -4,6 +4,7 @@ import Hero from '../../components/Hero/Hero'
 import './Home.scss'
 import Message from '../../components/Message'
 import Trials from '../../components/Trials/Trials'
+import Footer from '../../components/Footer'
 
 const messageProps = {
   title: 'Speak out. Be Heard.',
@@ -61,6 +62,7 @@ const Home = () => (
     <div className="home__previous-trials">
       <Message {...messageProps} />
       <Trials {...trialsProps} />
+      <Footer />
     </div>
   </Fragment>
 )

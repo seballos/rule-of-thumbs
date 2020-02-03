@@ -1,8 +1,11 @@
+@import '../../styles/partials/mixins';
+
 .footer {
   align-items: center;
   border-top: 1px dotted black;
   color: #333;
   display: flex;
+  flex-wrap: wrap;
   height: 90px;
   justify-content: space-between;
   font-size: 12px;
@@ -22,5 +25,9 @@
   &__icon {
     height: 25px;
     width: 25px;
+  }
+
+  @include respond-to('small') {
+    justify-content: space-evenly;
   }
 }

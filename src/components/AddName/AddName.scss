@@ -16,9 +16,22 @@
     justify-content: space-between;
   }
   
+  &__title {
+    font-size: 30px;
+
+    @include respond-to('small') {
+      font-size: 22px;
+    }
+  }
+
   &__button {
     @include naked-button;
     border: 2px solid black;
+    font-size: 20px;
     padding: 15px 35px;
+
+    @include respond-to('small') {
+      font-size: 14px;
+    }
   }
 }

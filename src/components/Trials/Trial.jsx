@@ -21,12 +21,12 @@ const Trial = ({ bgImage, name, trialDate, category, description, stats }) => {
               </div>
               <div className="trial__bio">
                 <h1 className="trial__bio__name">{name}</h1>
-                <p><TimeAgo date={trialDate} /> in {category}</p>
+                <p className="trial__bio__date"><TimeAgo date={trialDate} className="trial__bio__ago"/> in {category}</p>
                 <p>{description}</p>
                 <div className="trial__actions">
                   <ThumbButton className="trial__actions__button trial__actions__button--up" type="up" size="small" />
                   <ThumbButton className="trial__actions__button" type="down" size="small" />
-                  <div className="trial__vote-now">Vote Now</div>
+                  <button className="trial__vote-now">Vote Now</button>
                 </div>
               </div>
             </div>

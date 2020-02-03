@@ -1,3 +1,5 @@
+@import '../../styles/partials/mixins';
+
 .opinion {
   left: 130px;
   max-width: 500px;
@@ -8,16 +10,54 @@
   &__content {
     background: rgba(51, 51, 51, 0.45);
     color: white;
-//    filter: blur(4px);
-    padding: 40px 30px;
+    padding: 40px 60px 40px 30px;
+    position: relative;
   }
-
+  
   &__actions {
     display: flex;
   }
+  
+  .hero__background &__bgblur {
+    background: inherit;
+    filter: blur(4px);
+    left: 0;
+    height: 745px;
+    position: absolute;
+    top: 0;
+    width: 100vw;
+    z-index: -1;
+  }
 
-  &__personality {
-    font-size: 57px;
+  &__icon {
+    height: 16px;
+    margin-right: 5px;
+    width: 16px;
+    vertical-align: bottom;
+  }
+
+  & &__name {
+    font-size: 60px;
     letter-spacing: 2.4px;
+    line-height: 1;
+    margin-bottom: 29px;
+  }
+
+  & &__description {
+    font-size: 21px;
+    margin-bottom: 19px;
+  }
+
+  & &__link {
+    @include lato-link {
+      color: inherit;
+      text-decoration: underline;
+    }
+  }
+
+  & &__verdict {
+    font-size: 20px;
+    font-weight: bold;
+    margin-top: 35px;
   }
 }

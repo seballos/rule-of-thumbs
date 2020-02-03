@@ -7,7 +7,7 @@ const AddName = () => (
   <div className="add-name">
     <div className="add-name__background" style={{ backgroundImage: `url('${IMAGE}')` }}>
       <div className="add-name__overlay">
-        <p>Is there anyone else you would want to add?</p>
+        <p className="add-name__title">Is there anyone else you would want to add?</p>
         <button className="add-name__button">Submit a Name</button>
       </div>
     </div>

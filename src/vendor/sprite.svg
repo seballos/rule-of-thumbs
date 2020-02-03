@@ -40,4 +40,8 @@
     </defs>
     <path id="glass" data-name="Glass" class="cls-1" d="M1140.26,42.592c4.4,0,8.68,2.879,8.68,8.625s-4.28,8.625-8.68,8.625-8.68-2.879-8.68-8.625S1135.86,42.592,1140.26,42.592Zm0-1.592c-5.07,0-10.26,3.4-10.26,10.217s5.19,10.216,10.26,10.216a10.983,10.983,0,0,0,5.49-1.443l6.67,7.01,1.58-1.591-6.44-6.768a9.928,9.928,0,0,0,2.96-7.424C1150.52,44.4,1145.33,41,1140.26,41Z" transform="translate(-1130 -41)"/>
   </symbol>
+  <symbol id="wiki" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 16 12">
+    <image id="wiki" xlink:href="data:img/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAMCAYAAABr5z2BAAABI0lEQVQokYWSvyvFYRTGP1d+LnZluZuSGJUyGA13U6IUhjtIyuYfMDDerBbXRBm5u0lkQ4oUWe5gkzvo0dHzvfd0U946vef5fM95ztv7fkuSzoBx4BM4ARpADRgCvoEL4AHYBkaADeDDNU0kTamz1iUFm0tszexe0pGkPutm1GNx6uKGdWaHksYk3aRvFUnXkRdgJk0sm01bx6R3SSvJ4FzSQTaIuHNDLbEXs8fEhiXdShoN3UNn7TlbhTbf9x665LwKvAJvvyo5D0hqeeKiWb7gqlnc03LRl0/QAurON71XzGMtAGWgFzhud6UTREykiTuSdiVNWn/5TrZyT7dBxGUymTW7SmzwP4N5F8a0gi2Z1bvr/zKIeO56935JT/6BOnUSP5oQ+B9+XnnFAAAAAElFTkSuQmCC"/>
+  </symbol>
+
 </svg>

@@ -8,6 +8,8 @@
 
   &__votes {
     display: inline-block;
+    font-size: 40px;
+    font-weight: lighter;
     margin-bottom: 27px;
   }
   
@@ -61,8 +63,11 @@
     }
 
     &__vote-now {
+      @include naked-button;
+
       background: linear-gradient(transparent, rgba(0, 0, 0, 0.5));
       border: 2px solid white;
+      color: white;
       padding: 10px 30px;
     }
 
@@ -87,8 +92,20 @@
     }
 
     &__bio {
+      padding-right: 10%;
+
       &__name {
+        font-size: 45px;
         margin: 0;
+      }
+
+      &__date {
+        font-size: 12px;
+        margin-bottom: 14px;
+      }
+
+      &__ago {
+        font-weight: bold;
       }
     }
 
@@ -116,10 +133,21 @@
 
     &:nth-child(even) {
       margin-left: 20px;
+      @include respond-to('small') {
+        margin-left: 0;
+      }
     }
 
     &:nth-child(odd) {
       margin-right: 20px;
+
+      @include respond-to('small') {
+        margin-right: 0;
+      }
+    }
+
+    @include respond-to('small') {
+      flex-basis: 100%;
     }
   }
 }

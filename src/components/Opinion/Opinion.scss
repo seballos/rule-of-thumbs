@@ -45,6 +45,7 @@
     letter-spacing: 2.4px;
     line-height: 1;
     margin-bottom: 29px;
+    white-space: nowrap;
 
     @include respond-to('small') {
       font-size: 48px;

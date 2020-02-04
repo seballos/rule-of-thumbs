@@ -1,22 +1,19 @@
 import React, { Fragment } from 'react'
+import PropTypes from 'prop-types'
 
 import './Opinion.scss'
 import ThumbButton from '../ThumbButton/ThumbButton'
 import Icon from '../Icon/Icon'
 
-const Opinion = () => (
+const Opinion = ({ name, description, wikiLink }) => (
   <div className="opinion">
     <article className="opinion__content">
       <p> 
         What's your opinion on</p>
-      <p className="opinion__name">Pope Francis?</p>
-      <p className="opinion__description">
-        He's talking tough on clergy sexual abuse,
-        but is he just another papal pervert protector?
-        (thumbs down) or a true pedophile punishing pontiff?(thumbs up)
-      </p>
+      <p className="opinion__name">{name}?</p>
+      <p className="opinion__description">{description}</p>
       <a 
-        href="https://en.wikipedia.org/wiki/Pope_Francis" 
+        href={wikiLink} 
         target="_blank" 
         rel="noopener noreferrer" 
         className="opinion__link"
@@ -32,5 +29,12 @@ const Opinion = () => (
     </div>
   </div>
 )
+
+Opinion.propTypes = {
+  name: PropTypes.string.isRequired,
+  category: PropTypes.string.isRequired,
+  description: PropTypes.string.isRequired,
+  wikiLink: PropTypes.string.isRequired
+}
 
 export default Opinion

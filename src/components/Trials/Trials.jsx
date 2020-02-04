@@ -1,27 +1,38 @@
-import React, { Fragment } from 'react'
+import React, { Fragment, useReducer } from 'react'
 import PropTypes from 'prop-types'
 import Trial from './Trial'
+import AddName from '../AddName/AddName'
+import { trialsReducer, UPDATE_VOTING } from './Trials.reducer'
 
 import './Trials.scss'
-import AddName from '../AddName/AddName'
 
-const Trials = ({ model }) => (
-  <Fragment>
-    <span className="trials__votes">Votes</span>
-    <div className="trials">
+const Trials = ({ model }) =>  {
+  const [state, dispatch] = useReducer(trialsReducer, model)
 
-      {model.map(personInformation => (
-        <Trial {...personInformation} key={personInformation.name} />
-      ))}
-    </div>
-    <AddName />
-  </Fragment>
-)
+  function updateVoting(index, stats) {
+    dispatch({ type: UPDATE_VOTING, index, stats})
+  }
+
+  return (
+    <Fragment>
+      <span className="trials__votes">Votes</span>
+      <div className="trials">
+  
+        {state.map((personInformation, index) => (
+          <Trial index={index} key={personInformation.name} onVote={updateVoting} {...personInformation} />
+        ))}
+      </div>
+      <AddName />
+    </Fragment>
+  )
+}
+
+
 
 Trials.propTypes = {
   model: PropTypes.arrayOf(PropTypes.shape({
     name: PropTypes.string.isRequired,
-    trialDate: PropTypes.string.isRequired,
+    trialDueDate: PropTypes.string.isRequired,
     category: PropTypes.string.isRequired,
     description: PropTypes.string.isRequired,
     bgImage: PropTypes.string.isRequired,

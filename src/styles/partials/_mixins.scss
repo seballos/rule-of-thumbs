@@ -1,0 +1,46 @@
+@mixin lato-link {
+  &,
+  &:active,
+  &:visited,
+  &:hover {
+    text-decoration: none;
+    @content;
+  }
+}
+
+@mixin naked-button {
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  outline: none;
+}
+
+@mixin cover-image {
+  background-position: top center;
+  background-size: cover;
+  bottom: 0px;
+  left: 0px;
+  position: relative;
+  right: 0px;
+  top: 0px;
+  z-index: 0;
+}
+
+$breakpoints: (
+  'xsmall': 374px,
+  'small':  767px,
+  'medium': 992px,
+  'large':  1200px
+) !default;
+
+@mixin respond-to($breakpoint) {
+  @if map-has-key($breakpoints, $breakpoint) {
+    @media (max-width: map-get($breakpoints, $breakpoint)) {
+      @content;
+    }
+  }
+  @else {
+    @warn "Unfortunately, no value could be retrieved from `#{$breakpoint}`. "
+        + "Available breakpoints are: #{map-keys($breakpoints)}.";
+  }
+}

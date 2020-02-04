@@ -42,10 +42,12 @@
     "node-sass": "^4.13.1",
     "postcss-loader": "^3.0.0",
     "postcss-preset-env": "^6.7.0",
+    "raw-loader": "^4.0.0",
     "react-hot-loader": "^4.12.19",
     "rimraf": "^3.0.1",
     "sass-loader": "^8.0.2",
     "style-loader": "^1.1.3",
+    "url-loader": "^3.0.0",
     "webpack": "^4.41.5",
     "webpack-cli": "^3.3.10",
     "webpack-dev-server": "^3.10.2",
@@ -55,7 +57,8 @@
     "prop-types": "^15.7.2",
     "react": "^16.12.0",
     "react-dom": "^16.12.0",
-    "react-router-dom": "^5.1.2"
+    "react-router-dom": "^5.1.2",
+    "react-timeago": "^4.4.0"
   },
   "scripts": {
     "dev": "webpack-dev-server --env.env=dev",

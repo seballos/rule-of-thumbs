@@ -4,8 +4,8 @@ import Icon from '../Icon/Icon'
 
 import './ThumbButton.scss'
 
-const ThumbButton = ({ className, type, size }) => (
-  <button className={`thumb-button ${size} ${type} ${className}`}><Icon name={`#thumbs-${type}`} className={size}/></button>
+const ThumbButton = ({ className, type, size, ...props }) => (
+  <button className={`thumb-button ${size} ${type} ${className}`} {...props}><Icon name={`#thumbs-${type}`} className={size}/></button>
 )
 
 ThumbButton.propTypes = {

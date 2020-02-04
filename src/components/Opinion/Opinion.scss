@@ -11,7 +11,11 @@
     background: rgba(51, 51, 51, 0.45);
     color: white;
     padding: 40px 60px 40px 30px;
-    position: relative;
+    position: relative; 
+
+    @include respond-to('small') {
+      padding: 30px 60px 30px 20px;
+    }
   }
   
   &__actions {
@@ -41,11 +45,24 @@
     letter-spacing: 2.4px;
     line-height: 1;
     margin-bottom: 29px;
+
+    @include respond-to('small') {
+      font-size: 48px;
+      margin-bottom: 19px;
+    }
+
+    @include respond-to('xsmall') {
+      font-size: 34px;
+    }
   }
 
   & &__description {
     font-size: 21px;
     margin-bottom: 19px;
+
+    @include respond-to('small') {
+      font-size: 16px;
+    }
   }
 
   & &__link {
@@ -59,5 +76,17 @@
     font-size: 20px;
     font-weight: bold;
     margin-top: 35px;
+
+    @include respond-to('small') {
+      font-size: 16px;
+      margin-top: 25px;
+    }
+  }
+
+  @include respond-to('small') {
+    left: 10%;
+    right: 10%;
+    top: 50%;
+    transform: translateY(-50%);
   }
 }
